@@ -15,6 +15,7 @@ namespace CreationalPatterns
         {
             RunFactoryMethod();
             RunAbstractFactory();
+            RunPrototype();
             Console.Read();
         }
 
@@ -44,6 +45,23 @@ namespace CreationalPatterns
             var factoryB = new ProductBFactory();
             var productB = packageFactoryB.MakePackage(factoryB);
             Console.WriteLine(productB.title);
+        }
+
+        private static void RunPrototype()
+        {
+            Console.WriteLine(Environment.NewLine + "Prototypes");
+
+            var prototypeA = new PrototypeProductA();
+            Console.WriteLine(prototypeA.Title);
+
+            var prototypeAClone = prototypeA.Clone();
+            Console.WriteLine(prototypeA.Title);
+
+            var prototypeB = new PrototypeProductB();
+            Console.WriteLine(prototypeB.Title);
+
+            var prototypeBClone = prototypeB.Clone();
+            Console.WriteLine(prototypeB.Title);
         }
     }
 }
