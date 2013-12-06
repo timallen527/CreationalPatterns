@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FactoryMethod
 {
-    public class Class1
+    public interface IProduct
     {
+        String title { get; set; }
     }
 }
