@@ -14,7 +14,7 @@ namespace CreationalPatterns
         static void Main(string[] args)
         {
             RunFactoryMethod();
-            RunAbstractFactoryMethod();
+            RunAbstractFactory();
             Console.Read();
         }
 
@@ -22,27 +22,27 @@ namespace CreationalPatterns
         {
             Console.WriteLine(Environment.NewLine + "Factory Method");
 
-            IProductFactory factoryA = new ProductAFactory();
-            IProduct productA = factoryA.CreateProduct();
+            var factoryA = new ProductAFactory();
+            var productA = factoryA.CreateProduct();
             Console.WriteLine(productA.title);
 
-            IProductFactory factoryB = new ProductBFactory();
-            IProduct productB = factoryB.CreateProduct();
+            var factoryB = new ProductBFactory();
+            var productB = factoryB.CreateProduct();
             Console.WriteLine(productB.title);
         }
 
-        private static void RunAbstractFactoryMethod()
+        private static void RunAbstractFactory()
         {
             Console.WriteLine(Environment.NewLine + "Abstract Factory Method");
 
-            IPackageFactory packageFactoryA = new PackageFactory();
-            IProductFactory factoryA = new ProductAFactory();
-            IProduct productA = packageFactoryA.MakePackage(factoryA);
+            var packageFactoryA = new PackageFactory();
+            var factoryA = new ProductAFactory();
+            var productA = packageFactoryA.MakePackage(factoryA);
             Console.WriteLine(productA.title);
 
-            IPackageFactory packageFactoryB = new PackageFactory();
-            IProductFactory factoryB = new ProductBFactory();
-            IProduct productB = packageFactoryB.MakePackage(factoryB);
+            var packageFactoryB = new PackageFactory();
+            var factoryB = new ProductBFactory();
+            var productB = packageFactoryB.MakePackage(factoryB);
             Console.WriteLine(productB.title);
         }
     }
