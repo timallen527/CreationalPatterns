@@ -12,6 +12,7 @@ namespace CreationalPatterns
         static void Main(string[] args)
         {
             RunFactoryMethod();
+            Console.Read();
         }
 
         private static void RunFactoryMethod()
@@ -19,7 +20,6 @@ namespace CreationalPatterns
             IProductFactory factory = new ProductFactory();
             IProduct product = factory.CreateProduct();
             Console.WriteLine(product.title);
-            Console.Read();
         }
     }
 }
