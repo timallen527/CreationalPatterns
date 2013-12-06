@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AEF93061-92A6-46D2-A73C-803E640CE583}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{9E6A4356-9572-4016-A575-500054DEE846}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CreationalPatterns</RootNamespace>
-    <AssemblyName>CreationalPatterns</AssemblyName>
+    <RootNamespace>Products</RootNamespace>
+    <AssemblyName>Products</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,25 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="ProductA.cs" />
+    <Compile Include="ProductB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj">
-      <Project>{7b3170f9-6911-40d9-ae7f-1ddb4fbb9ca8}</Project>
-      <Name>AbstractFactory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj">
-      <Project>{27af5368-cf07-4582-bb0d-c0ffe8e18dc4}</Project>
-      <Name>FactoryMethod</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Products\Products.csproj">
-      <Project>{9e6a4356-9572-4016-a575-500054dee846}</Project>
-      <Name>Products</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

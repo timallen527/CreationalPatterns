@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FactoryMethod
+namespace Products
 {
-    public class Product : IProduct
+    public class ProductB : IProduct
     {
         public String title { get; set; }
 
-        public Product()
+        public ProductB()
         {
-            title = "Sample Product";
+            title = "Product B";
         }
     }
 }

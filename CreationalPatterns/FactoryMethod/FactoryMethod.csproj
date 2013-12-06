@@ -39,11 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IProduct.cs" />
     <Compile Include="IProductFactory.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductFactory.cs" />
+    <Compile Include="ProductBFactory.cs" />
+    <Compile Include="ProductAFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Products\Products.csproj">
+      <Project>{9e6a4356-9572-4016-a575-500054dee846}</Project>
+      <Name>Products</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
